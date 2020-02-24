@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>konversi</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    [class*="col-"] {
+        padding: 15px;
+        float: left;
+        width: 100%;
+    }
+
+    .header {
+        background: url("logo_putih.png") #5e0001 no-repeat center;
+        background-size: 100px 100px;
+        height: 200px;
+    }
+
+    @media only screen and (min-width: 6000x) {
+
+        /* for tablets: */
+        .col-s-1 {
+            width: 8.33%;
+
+        }
+
+        .col-s-2 {
+            width: 16.66%;
+        }
+
+        .col-s-3 {
+            width: 25%;
+
+        }
+
+        .col-s-4 {
+            width: 33.33%;
+
+        }
+
+        .col-s-5 {
+            width: 41.66%;
+
+        }
+
+        .col-s-6 {
+            width: 50%;
+        }
+
+        .col-s-7 {
+            width: 58.33%;
+        }
+
+        .col-s-8 {
+            width: 66.66%;
+
+        }
+
+        .col-s-9 {
+            width: 75%;
+
+        }
+
+        .col-s-10 {
+            width: 83.33%;
+        }
+
+        .col-s-11 {
+            width: 91.66%;
+        }
+
+        .col-s-12 {
+            width: 100%;
+        }
+
+        .header {
+            background: url("logo_putih.png") #5e0001 no-repeat center;
+            height: 200px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+        /* for desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .header {
+            background: url("logo_putih.png") #5e0001 no-repeat center;
+            height: 200px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- header muLai -->
+        <div class="col-12 header"> </div>
+        <marquee  style="font-family:Tahoma; font-size:20px; columns: #ee2233;">Konversi Suhu dan Mata Uang</marquee>
+
+
+        <!-- /. ROW  -->
+        <hr />
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Konversi Suhu (Celcius Ke Reamur)
+                    </div>
+                    <script type="text/javascript">
+                        function cel() {
+                            var x = celc.val1.value
+                            y = (x / 100) * 80;
+                            document.getElementById("hsl").innerHTML = "Hasilnya : " + y + " Reamur";
+                            document.getElementById("persen").style.width = x + "%";
+                        }
+                    </script>
+                    <div class="panel-body">
+                        <form name="celc">
+                            <div class="form-group">
+                                <label>Masukan Derajat Celcius</label>
+                                <input class="form-control" name="val1" placeholder="" />
+                            </div>
+                            <input type="button" name="ll" onclick="cel()" class="btn btn-success btn"
+                                value="Konversikan"><br><br>
+                            <div id="hsl" class="alert alert-info">
+                                Hasilnya :
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Konversi Suhu (Celcius Ke Kelvin)
+                    </div>
+                    <script type="text/javascript">
+                        function kel() {
+
+                            x = eval(kelv.val2.value);
+                            k = x + 273;
+
+                            document.getElementById("hslKel").innerHTML = "Hasilnya : " + k + " Kelvin";
+                            document.getElementById("persenK").style.width = x + "%";
+                        }
+                    </script>
+                    <div class="panel-body">
+                        <form name="kelv">
+                            <div class="form-group">
+                                <label>Masukan Derajat Celcius</label>
+                                <input class="form-control" name="val2" placeholder="" />
+                            </div>
+                            <input type="button" onclick="kel()" class="btn btn-danger btn" value="Konversikan"><br><br>
+                            <div id="hslKel" class="alert alert-info">
+                                Hasilnya :
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Konversi Suhu (Celcius Ke Farenheit)
+                    </div>
+                    <script type="text/javascript">
+                        function far() {
+                            x = eval(fare.val2.value);
+                            k = (9 / 5 * x) + 32;
+                            document.getElementById("hslFar").innerHTML = "Hasilnya : " + k + " Farenheit";
+                            document.getElementById("persenF").style.width = x + "%";
+                        }
+                    </script>
+                    <div class="panel-body">
+                        <form name="fare">
+                            <div class="form-group">
+                                <label>Masukan Derajat Celcius</label>
+                                <input class="form-control" name="val2" placeholder="" />
+                            </div>
+                            <input type="button" onclick="far()" class="btn btn-warning btn"
+                                value="Konversikan"><br><br>
+                            <div id="hslFar" class="alert alert-info">
+                                Hasilnya :
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!--ROW-->
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Konversi Mata Uang (Rupiah Ke $ Amerika)
+                </div>
+                <script type="text/javascript">
+                    function rup() {
+                        x = eval(rupiah.val2.value);
+                        k = x / 13000;
+                        document.getElementById("hslDol").innerHTML = "Hasilnya : $" + k + " ";
+
+                    }
+                </script>
+                <div class="panel-body">
+                    <form name="rupiah">
+                        <div class="form-group">
+                            <label>Masukan Jumlah Rupiah ($1=Rp.13000)</label>
+                            <input class="form-control" name="val2" placeholder="" />
+                        </div>
+                        <input type="button" onclick="rup()" class="btn btn-success btn" value="Konversikan"><br><br>
+                        <div id="hslDol" class="alert alert-info">
+                            Hasilnya :
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Konversi Mata Uang ($ Amerika Ke Rupiah )
+                </div>
+                <script type="text/javascript">
+                    function dol() {
+                        x = eval(dolar.val2.value);
+                        k = 13000 * x;
+                        document.getElementById("hslRup").innerHTML = "Hasilnya : Rp." + k + " ";
+
+                    }
+                </script>
+                <div class="panel-body">
+                    <form name="dolar">
+                        <div class="form-group">
+                            <label>Masukan Jumlah $usd ($1=Rp.13000)</label>
+                            <input class="form-control" name="val2" placeholder="" />
+                        </div>
+                        <input type="button" onclick="dol()" class="btn btn-success btn" value="Konversikan"><br><br>
+                        <div id="hslRup" class="alert alert-info">
+                            Hasilnya :
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- amot footer -->
+        <div class="col-12 footer"> &copy; Copyright by Memoreza Sabana </div> 
+    </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
